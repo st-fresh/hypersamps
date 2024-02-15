@@ -1,5 +1,5 @@
-import {app} from 'https://cdn.skypack.dev/hyperapp'
-import ColorView from './colors.js'
+import { app } from 'hyperapp'
+import ColorView from './colors.jsx'
 app({
   init: {color:"red"},
   view: state => ColorView({
