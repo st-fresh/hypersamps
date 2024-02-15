@@ -1,16 +1,15 @@
-import jsx from 'https://cdn.skypack.dev/hyperapp-jsx-pragma' //@jsx jsx
 import colors from "./color-dictionary.js"
- 
+
 const hexToRgb = hex => {
   const num = parseInt(hex.replace(/^#/, ""), 16)
   return [num >> 16, num >> 8 & 255, num & 255]
 }
- 
+
 const isDark = rgb => Math.round((
   parseInt(rgb[0]) * 299 +
   parseInt(rgb[1]) * 587 +
   parseInt(rgb[2]) * 114) / 1000) <= 140
- 
+
 export default ({currentColor, onChangeColor}) => {
   const topRow =
     <div style={{
@@ -34,7 +33,7 @@ export default ({currentColor, onChangeColor}) => {
         </div>
       )}
     </div>
- 
+
   const bottomRow =
     <div style={{
       display: "flex",
@@ -65,8 +64,8 @@ export default ({currentColor, onChangeColor}) => {
         </div>
       )}
     </div>
- 
- 
+
+
   return (
     <div style={{
       display: "flex",
@@ -76,4 +75,3 @@ export default ({currentColor, onChangeColor}) => {
       {bottomRow}
     </div>)
 }
- 
